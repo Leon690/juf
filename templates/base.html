@@ -1,0 +1,82 @@
+<html>
+	<head>
+		{% block head %}	
+            <meta charset="UTF-8">
+            <link href="./css/elementos.css" rel="stylesheet">
+            <link href="./vendor/menu/fonts.css" rel="stylesheet">
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <link href="./vendor/buttons/css/styles.css" rel="stylesheet" inline>
+            <script src="./vendor/buttons/js/js.js" inline></script>
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+            <script src="./vendor/menu/js/menu.js"></script>
+            <title>Juventud Ferroviaria</title>
+		{% endblock %}    
+    </head>
+
+    <body>
+        <div class="cabecera">
+            <br>
+            <h1>Juventud Ferroviaria</h1>
+            <br><br>
+            <h2>Línea Roca</h2>
+        </div>
+        <header>
+            <div class="menu_bar">
+                <a href="./index.php?seccion=secciones" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+            </div>
+            <div class="block" align="center">
+                <a href="./index.php">
+                    <div class="btn" align="center">
+                        Principal
+                    </div>
+                </a>
+                <a href="./index.php?seccion=noticias">
+                    <div class="btn" align="center">
+                        Novedades
+                    </div>
+                </a>
+                <a href="./index.php?seccion=historia">
+                    <div class="btn" align="center">
+                        Historia
+                    </div>
+                </a>
+                <a href="./index.php?seccion=agrupacion">
+                    <div class="btn" align="center">
+                        Agrupación
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/seccional.tolosa" target="_blank">
+                    <div class="btn" align="center">
+                        Seccional
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/juvferroviaria.laplat
+                a?fref=ts" target="_blank">
+                    <div class="btn" align="center">
+                        Facebook
+                    </div>
+                </a>
+                <a href="./index.php?seccion=imagenes">
+                    <div class="btn" align="center">
+                        Imágenes
+                    </div>
+                </a>
+              </div>
+        </header>
+		{% block contenido %}
+		<!-- el bloque contenido de cada pagina...-->
+
+		{% endblock %}
+        <div class="pie">
+            <div class="propaganda">
+                <a href="http://www.unionferroviaria.org.ar/" target="_blank"><img src="http://i62.tinypic.com/155gnrm.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
+            </div>
+            <div class="cgt">
+                <a href="https://www.facebook.com/juan.peron.399?fref=ts" target="_blank"><img src="http://2.bp.blogspot.com/_grxvabiE8co/S3Vqr30zqAI/AAAAAAAAAAM/traxed69UF4/s320/CGT_ESCUDO.jpg"></a>
+            </div>
+            <p><b>Contacto:</b><p>
+            <p>Seccional La Plata: 2 n345</p>
+            <p>Teléfono: (0221) 421-7395</p>
+        </div>
+	</body>
+</html>

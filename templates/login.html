@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+	{{parent()}}
+	<!--ACA PODEMOS AGREGAR .css o .JS especiales para la seccion home en particular-->
+	<!--hacer css para admin-->
+{% endblock %}
+
+{% block contenido %}
+    <div class='error'>
+    {{error}}
+    </div>
+    <div>
+        <form method="post" action="./index.php?seccion=admin&amp;login=ok">
+        <input type="text" name="usuario" placeholder="Nombre de Usuario">
+        <input type="password" name="password" placeholder="Clave">
+        <input type="submit" value="ingresar">
+        </form>
+    </div>
+{% endblock %}

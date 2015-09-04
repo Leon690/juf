@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+	{{parent()}}
+	<!--ACA PODEMOS AGREGAR .css o .JS especiales para la seccion home en particular-->
+	<!--hacer css para admin-->
+{% endblock %}
+
+
+{% block contenido %}
+    <div>
+        <form method="post" action="./index.php?seccion=admin&amp;agregar=ok" enctype="multipart/form-data">
+        <input type="text" name="titulo" placeholder="Titular" required>
+        <textarea name="texto" cols="30" rows="3" placeholder="Texto de la Noticia" required></textarea>
+        <input type="file" name="foto" required>
+        <input type="submit" value="Cargar">
+        </form>
+    </div>
+    {% for n in noticias %}
+    	<div class="fecha">{{n.fecha|date("d/m/Y")}}</div>
+        <div class="titulo">{{n.titulo}}</div>
+        <div class="imagen" style="background-image:url('./noticias/{{n.id}}.jpg');"></div>
+    	<div class="texto">{{n.texto}}</div>
+        <a href="./index.php?seccion=admin&eliminar={{n.id}}">X</a>
+    {% endfor %}
+{% endblock %}
