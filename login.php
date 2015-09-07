@@ -8,6 +8,7 @@ if (isset($_GET["login"]) and isset($_POST["usuario"])){
 	}
 }
 if (!isset($_SESSION["admin"])){
+        echo $twig->render('login.html', $html);
         exit();
     }
 ?>

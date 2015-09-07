@@ -36,6 +36,12 @@
 				echo $twig->render('login.html', $html);
 			}
 			break;
+		case 'logout':
+			if (isset($_SESSION["admin"])){
+				session_destroy();
+				echo $twig->render('logout.html', $html);
+			}
+			break;
 		default:
 			echo $twig->render('home.html', $html);
 	}
